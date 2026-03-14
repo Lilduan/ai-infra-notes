@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Editors
+.idea/
+.vscode/
+
+# Local experiment output
+benchmarks/raw/tmp/
+logs/
+
+# Environment secrets
+.env
