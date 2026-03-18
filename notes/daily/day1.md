@@ -2,22 +2,12 @@
 
   - [x] 写一页 note，回答 training infra / inference infra / platform
      infra 分别是什么。
-  - [ ] 列出性能维度：latency、throughput、memory、bandwidth、
+  - [x] 列出性能维度：latency、throughput、memory、bandwidth、
      utilization、stability、cost，并给每个维度一句系统含义。
-  - [ ] 在你的 Mac 上把本地环境弄到可用：Python + PyTorch + profiler，
+  - [x] 在你的 Mac 上把本地环境弄到可用：Python + PyTorch + profiler，
      至少能跑一个最小 tensor demo。
-  - [ ] 画出一次 inference request 的完整路径：input -> tokenize ->
+  - [x] 画出一次 inference request 的完整路径：input -> tokenize ->
      host preprocess -> model forward -> sampling -> output。
-
-  最合理的时间分配：
-
-  - 25 min：写 AI infra 三分法
-  - 20 min：整理性能维度和它们之间的冲突
-  - 20 min：配环境并验证 torch / profiler
-  - 25 min：画 inference critical path
-
-  今天的交付物就按 TODO.md:81 来：
-  notes/day01-ai-infra-map.md，外加一份环境 checklist。
 
 
 
@@ -43,3 +33,21 @@
 - 一次完整的推理流程：
 
   ![该图表展示了大语言模型中的模型推理流程](/Users/fine/Project/ai-infra-learning/notes/daily/assets/ai-inference-glossary-diagram.svg)
+
+
+
+## 主要的性能指标
+
+latency：请求从开始到结果的时间。
+
+throughput，吞吐，可以按照请求，tokens，traning steps记
+
+memory，举例：模型权重 14GB，KV cache 再吃 10GB，
+
+bandwidth，数据搬运速率
+
+utilization，实际工作的时间，而不是等待数据，阻塞
+
+stability，比较宽泛
+
+cost

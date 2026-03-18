@@ -8,6 +8,18 @@ venv/
 
 # Jupyter
 .ipynb_checkpoints/
+.jupyter/*
+.ipython/
+scripts/.cache/
+scripts/.config/
+scripts/.home/
+scripts/.ipython/
+scripts/.jupyter_data/
+scripts/.jupyter_runtime/
+scripts/.local/
+
+# Keep notebooks tracked
+!*.ipynb
 
 # macOS
 .DS_Store

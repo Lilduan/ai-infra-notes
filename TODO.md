@@ -1,13 +1,17 @@
 # AI Infra Learning TODO
 
-Start date: 2026-03-15
+Start date: 2026-03-18
 Scope: first 2 weeks only
 Background: already familiar with Transformer and basic deep learning
 
+
+
 ## Week 1
 
-### Day 1 - 2026-03-15
+### Day 1 - 2026-03-18
 Focus: build the AI infra map and set up the environment
+Status: **completed**
+Execution note: the work was backfilled on 2026-03-16, and completion was confirmed on 2026-03-18. The planned deliverables exist in `notes/day01-ai-infra-map.md` and `env/local-checklist.md`.
 
 - Write a one-page note answering: what is training infra, what is inference infra, what is platform infra.
 - List the main performance dimensions: latency, throughput, memory, bandwidth, utilization, stability, cost.
@@ -18,8 +22,9 @@ Deliverable:
 - `notes/day01-ai-infra-map.md`
 - A simple environment checklist you can reuse later
 
-### Day 2 - 2026-03-16
+### Day 2 - 2026-03-19
 Focus: refresh PyTorch execution from a systems angle
+Execution note: started early on 2026-03-18 after Day 1 completion was confirmed.
 
 - Review tensor layout, autograd, operator dispatch, and eager execution.
 - Trace a small model forward pass and identify where compute, memory movement, and synchronization may happen.
@@ -29,7 +34,7 @@ Focus: refresh PyTorch execution from a systems angle
 Deliverable:
 - `notes/day02-pytorch-execution.md`
 
-### Day 3 - 2026-03-17
+### Day 3 - 2026-03-20
 Focus: understand the inference critical path
 
 - Run a small Transformer or LLM inference example.
@@ -41,7 +46,7 @@ Deliverable:
 - `notes/day03-inference-critical-path.md`
 - A table with latency numbers for at least 2 batch sizes
 
-### Day 4 - 2026-03-18
+### Day 4 - 2026-03-21
 Focus: profiling basics
 
 - Learn the basic outputs of PyTorch profiler or an equivalent profiler available in your environment.
@@ -53,7 +58,7 @@ Deliverable:
 - `notes/day04-profiling-basics.md`
 - One saved profiling capture or screenshot set
 
-### Day 5 - 2026-03-19
+### Day 5 - 2026-03-22
 Focus: memory and data movement
 
 - Study host memory vs device memory, pinned memory, copies, and synchronization points.
@@ -64,7 +69,7 @@ Focus: memory and data movement
 Deliverable:
 - `notes/day05-memory-data-movement.md`
 
-### Day 6 - 2026-03-20
+### Day 6 - 2026-03-23
 Focus: batching and throughput
 
 - Compare single-request inference with batched inference.
@@ -76,7 +81,7 @@ Deliverable:
 - `notes/day06-batching.md`
 - A small benchmark table
 
-### Day 7 - 2026-03-21
+### Day 7 - 2026-03-24
 Focus: weekly consolidation
 
 - Re-read all week 1 notes.
@@ -89,7 +94,7 @@ Deliverable:
 
 ## Week 2
 
-### Day 8 - 2026-03-22
+### Day 8 - 2026-03-25
 Focus: LLM inference specifics
 
 - Study prefill vs decode.
@@ -100,7 +105,7 @@ Focus: LLM inference specifics
 Deliverable:
 - `notes/day08-prefill-decode-kv-cache.md`
 
-### Day 9 - 2026-03-23
+### Day 9 - 2026-03-26
 Focus: serving system concepts
 
 - Learn the purpose of request queueing, scheduling, continuous batching, and admission control.
@@ -111,7 +116,7 @@ Focus: serving system concepts
 Deliverable:
 - `notes/day09-serving-architecture.md`
 
-### Day 10 - 2026-03-24
+### Day 10 - 2026-03-27
 Focus: quantization and model format tradeoffs
 
 - Study FP16, BF16, INT8, and 4-bit at a systems level.
@@ -122,7 +127,7 @@ Focus: quantization and model format tradeoffs
 Deliverable:
 - `notes/day10-quantization.md`
 
-### Day 11 - 2026-03-25
+### Day 11 - 2026-03-28
 Focus: PyTorch distributed basics
 
 - Learn the difference between data parallel, tensor parallel, and pipeline parallel.
@@ -133,7 +138,7 @@ Focus: PyTorch distributed basics
 Deliverable:
 - `notes/day11-distributed-basics.md`
 
-### Day 12 - 2026-03-26
+### Day 12 - 2026-03-29
 Focus: communication costs
 
 - Study why distributed jobs are often limited by communication rather than raw compute.
@@ -144,7 +149,7 @@ Focus: communication costs
 Deliverable:
 - `notes/day12-communication-costs.md`
 
-### Day 13 - 2026-03-27
+### Day 13 - 2026-03-30
 Focus: observability and failure thinking
 
 - Define the minimum metrics you would watch for an inference service: latency, throughput, error rate, queue length, GPU memory, utilization.
@@ -155,7 +160,7 @@ Focus: observability and failure thinking
 Deliverable:
 - `notes/day13-observability.md`
 
-### Day 14 - 2026-03-28
+### Day 14 - 2026-03-31
 Focus: second-week consolidation and next-step setup
 
 - Write a two-week summary covering inference path, profiling, KV cache, batching, quantization, and distributed basics.

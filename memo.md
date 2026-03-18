@@ -1,0 +1,3 @@
+- [2026-03-17] 确认 2026-03-15 的 Day 1 **未按原日期完成**，但已于 2026-03-16 backfill 完成交付物：`notes/day01-ai-infra-map.md` 与 `env/local-checklist.md`。今日学习从 Day 1 closure review 开始，随后进入 Day 2。
+- [2026-03-18] 确认 Day 1 **已经完成**。正式开始 Day 2，主题是 **从系统视角重新理解 PyTorch execution**。
+- [2026-03-19] Day 2 学习进行中。当前已经澄清 **`stride` 不等于 dtype size**、**`transpose` 通常只改变 view / `shape` / `stride` 而不复制 storage**、**`contiguous()` 会在需要时分配新内存并按当前逻辑顺序重排数据**。明天从 **tensor layout 与 op / kernel performance 的关系** 继续。
