@@ -32,10 +32,7 @@
 
 - 一次完整的推理流程：
 
-  ![该图表展示了大语言模型中的模型推理流程](/Users/fine/Project/ai-infra-learning/notes/daily/assets/ai-inference-glossary-diagram.svg)
-
-
-
+![ai-inference-glossary-diagram|697](assets/ai-inference-glossary-diagram.svg)
 ## 主要的性能指标
 
 latency：请求从开始到结果的时间。
