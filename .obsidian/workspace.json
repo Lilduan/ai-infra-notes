@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "f9ab23b7e686f618",
+        "id": "e58e40bd8f1fe1a0",
         "type": "tabs",
         "children": [
           {
-            "id": "d893585ee0e5f046",
+            "id": "4e49fb130e7dad9e",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
-              "state": {
-                "aFile": "notes/daily/day2.md",
-                "bFile": "notes/daily/day2.md",
-                "aRef": ""
-              },
-              "icon": "diff",
-              "title": "Diff: day2  (Working Tree)"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
             }
           }
         ]
@@ -194,12 +190,29 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d893585ee0e5f046",
+  "active": "dcf240ce8a49d6fc",
   "lastOpenFiles": [
     "notes/daily/day2.md",
-    "新建文件夹",
+    "README.md.tmp.25264.1774949144676",
+    "code/verify_torch_env.py",
+    "code/scripts/start_euporie.sh",
+    "code/scripts/start_jupyter.sh",
+    "code/notebooks/demo_euporie.ipynb",
+    "docs/env.md",
+    "docs/memo.md",
+    "docs/templates/weekly-summary-template.md",
+    "docs/templates/daily-note-template.md",
+    "docs/daily/assets/ai-inference-glossary-diagram.svg",
+    "docs/daily/assets",
+    "docs/daily/day2.md",
+    "docs/daily/day1.md",
+    "docs/notes/day02-pytorch-execution.md",
+    "docs/notes/day01-ai-infra-map.md",
+    "code/scripts",
+    "code/notebooks",
+    "code",
+    "docs/weekly",
     "AGENTS.md",
-    "未命名.base",
     "未命名.canvas",
     "memo.md",
     "2026-03-26.md",

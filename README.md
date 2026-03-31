@@ -4,16 +4,24 @@ This repository is a structured study workspace for transitioning from OS engine
 
 ## Layout
 
-- `TODO.md`: day-by-day study plan
-- `notes/daily/`: daily notes and study outputs
-- `notes/weekly/`: weekly summaries and interview-oriented recap
-- `notes/templates/`: reusable note templates
-- `benchmarks/raw/`: raw benchmark output, logs, profiler exports
-- `benchmarks/reports/`: cleaned benchmark summaries and analysis
-- `projects/`: small hands-on projects built during study
-- `references/`: selected reading notes and source summaries
-- `scripts/`: helper scripts for experiments and environment checks
-- `env/`: environment setup notes and reproducibility files
+```
+├── docs/               # 所有文档
+│   ├── notes/          # 技术学习笔记（每天主题）
+│   ├── daily/          # 每日日志（过程记录）
+│   ├── weekly/         # 周总结与面试复盘
+│   ├── templates/      # 笔记模板
+│   ├── env.md          # 环境配置与复现步骤
+│   └── memo.md         # 学习备忘录
+├── code/               # 所有代码
+│   ├── notebooks/      # Jupyter notebooks
+│   ├── scripts/        # Shell 脚本
+│   └── verify_torch_env.py
+├── benchmarks/
+│   ├── raw/            # 原始 benchmark 输出
+│   └── reports/        # 整理后的分析报告
+├── projects/           # 动手项目
+└── references/         # 阅读笔记与文献摘要
+```
 
 ## Working Rules
 
