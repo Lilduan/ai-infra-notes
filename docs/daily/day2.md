@@ -10,8 +10,8 @@ Time spent: 60-90 min target
 
 ## Today Checklist
 
-- [ ] Review `tensor layout`、`autograd`、`operator dispatch`、`eager execution`
-- [ ] Trace 一个最小 model 的 forward pass
+- [x] Review `tensor layout`、`autograd`、`operator dispatch`、`eager execution`
+- [x] Trace 一个最小 model 的 forward pass
 - [ ] 标出 compute / memory movement / synchronization 可能发生的位置
 - [ ] 写清 Python overhead 和 backend execution 的边界
 - [ ] 记录 5 个关于 PyTorch internals 还答不清的问题
@@ -68,9 +68,27 @@ Time spent: 60-90 min target
 	-  FX Graph 构建完成后，就是交给后端 （默认是 Inductor 处理）做一些算子融合，内存规划（减少中间的buffer分配）
 	- 然后 ```生成 Triton kernel（GPU）或 C++ kernel（CPU）```
 	- 然后缓存编译结果，下次运行可以直接调用。
-## 下一步
-- [ ] 解释 trace_minimal_forward.py 的计算图，理解一下
-
-
-
-
+## 计算图可视化
+有两种追踪层面
+- fx 是给研究/编译器用的中间表示；
+- jit.trace 解决的是另一个问题：把模型从 Python 环境里带走。
+- fx
+	- 不是真实数据，只是符号执行。
+	- 这一步生成一个**计算图**，可以基于这个计算图修改其中的节点，叫做**图变换**，例如把RELU换成GELU。
+	- 也可以将几个节点融合成一个cuda kernel，或者在计算图中插入量化节点
+	- fx图是一个快照。
+		- 静态的流程时（没有if等语句），生成图之后，你修改图、recompile、运行，就可以完全与代码解耦。
+		- 有if的时候，如果修改节点可能会改变原有语义。
+- jit.trace
+	- 不再依赖python，用作训练结束后的部署
+	- 模型结构，权重通过这种格式保存，在任意地方使用，c++也是通过这个方式加载的。
+	- ```python
+	    # 保存成单文件，包含模型结构 + 权重
+	    torch.jit.save(traced, "mini_mlp.pt")
+	  
+	    # 任何地方加载，不需要 MiniMLP 类定义
+	    loaded = torch.jit.load("mini_mlp.pt")
+	    out = loaded(x)
+	  ```
+	
+	  

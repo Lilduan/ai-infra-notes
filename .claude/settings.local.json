@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(find /d/ai-infra-notes -not -path */.git/* -not -path */.obsidian/plugins/*)"
+      "Bash(find /d/ai-infra-notes -not -path */.git/* -not -path */.obsidian/plugins/*)",
+      "Bash(pip show:*)",
+      "Bash(python:*)"
     ]
   }
 }

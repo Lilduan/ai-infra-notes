@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(conda info:*)",
+      "Bash(nvidia-smi --query-gpu=name,driver_version --format=csv,noheader)",
+      "Bash(conda run:*)",
+      "Bash(NO_PROXY=\"*\" conda install:*)"
+    ]
+  }
+}
